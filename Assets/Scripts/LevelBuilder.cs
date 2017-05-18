@@ -20,6 +20,7 @@ public class LevelBuilder : MonoBehaviour
 	}
 	}
 	int PP = 0;
+
 	void Update ()
 	{
 		int pp = (int)player.position.z / 50;
@@ -27,8 +28,8 @@ public class LevelBuilder : MonoBehaviour
 			CreateNextPlatform ();
 		}
 		PP = pp;
-	
 	}
+
 	void CreateNextPlatform()
 	{ 
 		GameObject clone;
@@ -38,7 +39,6 @@ public class LevelBuilder : MonoBehaviour
 		clone.transform.transform.position = PlatformSpawnpoint;
 		Debug.Log ("creating plartform");
 		Destroy (clone, destroytime);
-
 	}
 
 }
